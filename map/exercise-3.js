@@ -8,8 +8,9 @@ An array 'buttons' has been provided for you.
 A variable 'buttonElements' has also been provided
 for you. You should set your map to this variable.
 
-1. Use .map to loop through the 'buttons' array and
-generate a button element.
+1. Use .map to loop through the 'buttons' array 
+
+and generate a button element.((???))
 
 2. Set the 'text' of the current object to the 'innerText'
 value of the button element you have generated.
@@ -32,6 +33,12 @@ const buttons = [
   },
 ];
 
-const buttonElements = null; // Replace null and add .map code here
+const buttonElements = buttons.map((item) => {
+  
+  const newButton = document.createElement("button");
+
+}); 
+
+// Replace null and add .map code here
 
 console.log(buttonElements);
