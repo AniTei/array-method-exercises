@@ -38,6 +38,10 @@ const users = [
   },
 ];
 
-const filteredUsers = null; // Replace null and add .filter code here
+const filteredUsers = users.filter((user) => user.isAdmin && user.isVerified); // Replace null and add .filter code here
+
+//in the solution they did destructuring, instead of dot notation, i don't understand, oh well. what i did was right, but not great
+
+
 
 console.log(filteredUsers);
