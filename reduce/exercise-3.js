@@ -39,6 +39,33 @@ const teams = [
   },
 ];
 
-const winningTeams = null; // Replace null and add .reduce code here
+
+/* const winningTeamsExtended = teams.reduce((currentTeams, team) => {
+  if (team.isWinner) {
+      currentTeams[team.name.toLowerCase()] = team.score;
+  }
+
+*/
+
+const winningTeams = teams.reduce((teamsSoFar, {name, score, isWinner}) => {
+
+  if (isWinner) {
+    teamsSoFar[name.toLowerCase()] = score;
+  }
+
+  return teamsSoFar
+
+}, {},); 
+
+// Replace null and add .reduce code here
+
+//hmmm this was hard, couldn't figure it out, 
+// I understand that I am trying to make a new object, w two keys, each w the value of the teams score
+// but we only want to work w the ones that are winners, so we need an if, loop through to find, if true make key
+// So w start by making one property, we need the name to become a key therefore lowercase,
+// but how
+
+// this was really hard, how was I to know how to set a key and its value?
+// well now i've done it one time at least
 
 console.log(winningTeams);

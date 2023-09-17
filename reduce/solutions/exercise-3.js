@@ -49,9 +49,11 @@ const winningTeams = teams.reduce((currentTeams, { name, score, isWinner }) => {
   return currentTeams;
 }, {});
 
-// The example below doesn't destructure the team namew which makes it arguably
+
+// The example below doesn't destructure the team name which makes it arguably
 // a bit more harder to read
 const winningTeamsExtended = teams.reduce((currentTeams, team) => {
+
   if (team.isWinner) {
     currentTeams[team.name.toLowerCase()] = team.score;
   }

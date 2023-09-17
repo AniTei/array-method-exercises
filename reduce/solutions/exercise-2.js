@@ -45,12 +45,10 @@ const totalCostOfItems = items.reduce((totalCost, item) => {
 
 // You could destructure the properties from 'item'. This can
 // arguably become more readable.
-const totalCostOfItemsDestructured = items.reduce(
-  (totalCost, { itemsInStock, price }) => {
+
+const totalCostOfItemsDestructured = items.reduce((totalCost, { itemsInStock, price }) => {
     totalCost += itemsInStock * price;
     return totalCost;
-  },
-  0,
-);
+  },0,);
 
 console.log(totalCostOfItems);

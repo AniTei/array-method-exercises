@@ -36,6 +36,31 @@ const items = [
   },
 ];
 
-const totalCostOfItems = null; // Replace null and add .reduce code here
+/* const totalCostOfItems = items.reduce((accumulatedCost, currentItem) => 
+accumulatedCost += currentItem.price * currentItem.itemsInStock, 0 );
+ */
+
+
+const totalCostOfItems = items.reduce((accumulatedCost, {price, itemsInStock}) => 
+accumulatedCost += price * itemsInStock, 0 );
+
+//OK, so just name the keys in a curly box in the argumentline 
+// and use those names in the function
+
+
+
+// YEsss, did it on the first try, didn't have to look anything up :)))
+// now let's try and refactor, remove curlies and the return
+
+// In the soloution they did destructuring also.........
+//Let's try it, it basically means, not doing dot notation, 
+//but making "names" for properties we want to make use of in the function
+
+
+// Replace null and add .reduce code here
 
 console.log(totalCostOfItems);
+
+
+/* console.log(`The Price of all the items: ${totalCostOfItems}`);
+ */
