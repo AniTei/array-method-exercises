@@ -33,6 +33,11 @@ const people = [
   },
 ];
 
-const foundPerson = null; // Replace null and add .map code here
+
+// returns object with teh id of 1
+// refactored
+const foundPerson = people.find(({id}) => id === 1); 
 
 console.log(foundPerson);
+
+/* console.log("hei") */
